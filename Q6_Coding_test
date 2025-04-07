@@ -1,0 +1,8 @@
+def sum_top_scorers(data, subject, threshold):
+    total_marks = 0
+  
+    for student, subjects in data.items():
+        if subject in subjects and subjects[subject] >= threshold:
+            total_marks += subjects[subject]
+    
+    return total_marks
